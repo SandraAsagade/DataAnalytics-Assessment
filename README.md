@@ -62,6 +62,6 @@ In this **README**, I'll explain my approach to the assessment questions
 * After doing the above, the next step was filtering the query to only return records where the number of days inactive is over one year (the task says to focus on accounts with no transactions in the last one year. If the last one year is 365 days, it means that any account transaction above 365 days, means the account has been inactive for over a year)
 
 **Challenges:**
-*I think the main challenge I had was getting the inactivity days. This was where ChatGPT came to the rescue. I knew that to get it, I had to use the DATEDIFF function, but I wasn't sure how to in MySQL, as I am more farmiliar with MSSQL.
+* I think the main challenge I had was getting the inactivity days. This was where ChatGPT came to the rescue. I knew that to get it, I had to use the DATEDIFF function, but I wasn't sure how to in MySQL, as I am more farmiliar with MSSQL.
 
 [View query](https://github.com/SandraAsagade/DataAnalytics-Assessment/blob/main/Assessment_Q3.sql)
