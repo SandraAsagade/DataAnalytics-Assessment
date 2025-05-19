@@ -65,3 +65,27 @@ In this **README**, I'll explain my approach to the assessment questions
 * I think the main challenge I had was getting the inactivity days. This was where ChatGPT came to the rescue. I knew that to get it, I had to use the DATEDIFF function, but I wasn't sure how to in MySQL, as I am more farmiliar with MSSQL.
 
 [View query](https://github.com/SandraAsagade/DataAnalytics-Assessment/blob/main/Assessment_Q3.sql)
+
+## ASSESSMENT QUESTION 4. CUSTOMER LIFETIME VALUE (CLV) ESTIMATION
+
+**Scenario:** Marketing wants to estimate CLV based on account tenure and transaction volume (simplified model).
+
+**Task:** For each customer, assuming the profit_per_transaction is 0.1% of the transaction value, calculate:
+
+* Account tenure (months since signup)
+* Total transactions
+* Estimated CLV (Assume: CLV = (total_transactions / tenure) * 12 * avg_profit_per_transaction)
+Order by estimated CLV from highest to lowest
+
+**Tables:**
+* users_customuser
+* savings_savingsaccount
+
+**Approach:**
+* Understanding what CLV meant was important for this task, and the instructions give were very helpful. In fact, by follwoing the instructions, I was able to efficiently and painlessly write the query.
+* First of all, I created a temporary table in the query to show the main fields that'll be needed to get the expected result.
+* After getting the tenure in days from when the customer signed up, to the current date, the result was then divided by the average number of days per month (30.42), so as to get the tenure in months.
+* Because I understood what CLV meant, it was easy for me to identify the amount column to be used (confirmed_amount - which focuses on inflow), and
+* Lastly, I queried the temporary table for the expected customer lifetime value, grouping the result by the customers.
+
+[View query](https://github.com/SandraAsagade/DataAnalytics-Assessment/blob/main/Assessment_Q4.sql)
