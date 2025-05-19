@@ -29,4 +29,5 @@ INNER JOIN savings_savingsaccount ON savings_savingsaccount.owner_id = users_cus
 INNER JOIN plans_plan ON plans_plan.id = savings_savingsaccount.plan_id
 WHERE is_a_fund = 1 OR is_regular_savings = 1
 GROUP BY owner_id, name
+HAVING savings_count >=1 AND investment_count >=1
 ORDER BY total_deposits DESC;	
