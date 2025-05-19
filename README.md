@@ -44,3 +44,24 @@ In this **README**, I'll explain my approach to the assessment questions
 * The records from the transaction frequency table were then grouped to get the frequency at which customers transact based on the given conditions
 
 [View query](https://github.com/SandraAsagade/DataAnalytics-Assessment/blob/main/Assessment_Q2.sql)
+
+## ASSESSMENT QUESTION 3: Account Inactivity Alert
+**Scenario:** The ops team wants to flag accounts with no inflow transactions for over one year.
+
+**Task:** Find all active accounts (savings or investments) with no transactions in the last 1 year (365 days) .
+
+**Tables:**
+* plans_plan
+* savings_savingsaccount
+
+**Approach:**
+* Just like all other queries, understanding the task at hand is key.
+* For this task, I created a conditional column ***type*** in the query using CASE WHEN to get the type of inflow transaction (savings or investments)
+* In other to get the number of days inactive, I had to first find their last transaction date using the MAX function.
+* The next was to deduct the last transaction date from the current date and get the result in days
+* After doing the above, the next step was filtering the query to only return records where the number of days inactive is over one year (the task says to focus on accounts with no transactions in the last one year. If the last one year is 365 days, it means that any account transaction above 365 days, means the account has been inactive for over a year)
+
+**Challenges:**
+*I think the main challenge I had was getting the inactivity days. This was where ChatGPT came to the rescue. I knew that to get it, I had to use the DATEDIFF function, but I wasn't sure how to in MySQL, as I am more farmiliar with MSSQL.
+
+[View query](https://github.com/SandraAsagade/DataAnalytics-Assessment/blob/main/Assessment_Q3.sql)
