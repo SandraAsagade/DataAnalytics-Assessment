@@ -66,7 +66,7 @@ In this **README**, I'll explain my approach to the assessment questions
 
 [View query](https://github.com/SandraAsagade/DataAnalytics-Assessment/blob/main/Assessment_Q3.sql)
 
-## ASSESSMENT QUESTION 4. CUSTOMER LIFETIME VALUE (CLV) ESTIMATION
+## ASSESSMENT QUESTION 4. Customer Lifetime Value (CLV) Estimation
 
 **Scenario:** Marketing wants to estimate CLV based on account tenure and transaction volume (simplified model).
 
@@ -86,6 +86,6 @@ Order by estimated CLV from highest to lowest
 * First of all, I created a temporary table in the query to show the main fields that'll be needed to get the expected result.
 * After getting the tenure in days from when the customer signed up, to the current date, the result was then divided by the average number of days per month (30.42), so as to get the tenure in months.
 * Because I understood what CLV meant, it was easy for me to identify the amount column to be used (confirmed_amount - which focuses on inflow), and
-* Lastly, I queried the temporary table for the expected customer lifetime value, grouping the result by the customers.
+* Lastly, I queried the temporary table for the estimated customer lifetime value, grouping the result by the customers.
 
 [View query](https://github.com/SandraAsagade/DataAnalytics-Assessment/blob/main/Assessment_Q4.sql)
